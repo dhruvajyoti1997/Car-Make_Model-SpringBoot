@@ -24,7 +24,7 @@ public class Car {
 	private String make;
 	@Column(name = "car_model", nullable = false)
 	@NotBlank(message = "Enter Car Model")
-	@Length(min = 2, message = "Model should be minimum 4 characters")
+	@Length(min = 6, message = "Model should be minimum 4 characters")
 	private String model;
 	public Long getId() {
 		return id;

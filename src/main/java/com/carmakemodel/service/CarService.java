@@ -20,4 +20,8 @@ public interface CarService {
 	  return car; 
   }
   
+  Car getCarById(Long id);
+  
+  Car updateVehiclebyId(Car car);
+  
 }
