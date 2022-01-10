@@ -9,30 +9,28 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div class="container my-2">
-		<div class="row">
-			<h1>Car List</h1>
-		</div>
-		<div class="row">
-			<div class="col-lg-3">
-				<a th:href="@{/processform/AddCar}"
-					class="btn btn-primary btn-sm mb-3"> Add Vehicle</a>
+	<div  class="container my-2">
+	<div class = "row">
+		<h1>Car List</h1>
+	</div>
+		<div class = "row">
+			<div class = "col-lg-3">
+				<a th:href = "@{/processform/AddCar}" class = "btn btn-primary btn-sm mb-3"> Add Vehicle</a>
 			</div>
 		</div>
-		<table border="1" class="table table-hover table-dark">
+		<table border="1" class= "table table-hover table-dark">
 			<tr>
-				<th>Car ID</th>
+			    <th>Car ID</th>
 				<th>Car Make</th>
 				<th>Car Model</th>
-                <th> Actions </th>
+
 			</tr>
 			<body>
 			<tr th:each="carDetails : ${carList}">
-				<td th:text="${carDetails.id}"></td>
+			    <td th:text="${carDetails.id}"></td>
 				<td th:text="${carDetails.make}"></td>
 				<td th:text="${carDetails.model}"></td>
-				<td><a th:href = "@{/processform/edit/{id} (id=${carDetails.id})}"
-						 class = "btn btn-primary">Edit</a></td>
+
 			</tr>
 			</div>
 </body>
